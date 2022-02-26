@@ -11,8 +11,8 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   },
   "dependencies": {
     "@types/node": "*",
+    "axios": "^0.26.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mongoose": "^6.2.1",
     "prettier": "^2.5.1"
