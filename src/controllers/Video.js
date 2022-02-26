@@ -29,12 +29,9 @@ export const getVideoInfo = async (req, res) => {
 
 export const createVideoModel = async (req, res) => {
   const { title, image } = req.body
-  console.log({ title, image })
   if (!title || !image) res.status(400).send({ error: 'Invalid request body!!' })
 
   const newVideo = await Video.create({ title, image })
-
-  console.log(newVideo);
   res.send(newVideo).end()
 }
 
