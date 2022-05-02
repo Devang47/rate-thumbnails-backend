@@ -18,11 +18,13 @@ app.all('*', (req, res) => {
   res.status(405).send('not a valid route');
 });
 
+const port = process.env.URI || 8080
+
 const start = async () => {
   try {
-    await connectToDb(process.env.URI);
+    await connectToDb(port);
     app.listen(process.env.PORT, () => {
-      console.log('Listening on PORT: ' + process.env.PORT || 8080);
+      console.log('Listening on PORT: ' + port);
     });
   } catch (error) {
     console.log(error);
