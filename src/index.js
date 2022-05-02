@@ -22,7 +22,7 @@ const start = async () => {
   try {
     await connectToDb(process.env.URI);
     app.listen(process.env.PORT, () => {
-      console.log('Listening on PORT: ' + process.env.PORT);
+      console.log('Listening on PORT: ' + process.env.PORT || 8080);
     });
   } catch (error) {
     console.log(error);
